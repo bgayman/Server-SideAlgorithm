@@ -13,6 +13,9 @@
 		CDEA17661F6D38E6004EEE99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17651F6D38E6004EEE99 /* Assets.xcassets */; };
 		CDEA17691F6D38E6004EEE99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17671F6D38E6004EEE99 /* LaunchScreen.storyboard */; };
 		CDEA17741F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */; };
+		CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */; };
+		CDEA17801F6D3B87004EEE99 /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */; };
+		CDEA17821F6D3E5F004EEE99 /* ZipCode+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 		CDEA176F1F6D38E6004EEE99 /* Server-SideAlgorithmTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Server-SideAlgorithmTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server_SideAlgorithmTests.swift; sourceTree = "<group>"; };
 		CDEA17751F6D38E6004EEE99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCode.swift; sourceTree = "<group>"; };
+		CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZipCode+TestData.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +84,7 @@
 			children = (
 				CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */,
 				CDEA17601F6D38E6004EEE99 /* ViewController.swift */,
+				CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */,
 				CDEA17621F6D38E6004EEE99 /* Main.storyboard */,
 				CDEA17651F6D38E6004EEE99 /* Assets.xcassets */,
 				CDEA17671F6D38E6004EEE99 /* LaunchScreen.storyboard */,
@@ -92,6 +98,7 @@
 			children = (
 				CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */,
 				CDEA17751F6D38E6004EEE99 /* Info.plist */,
+				CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */,
 			);
 			path = "Server-SideAlgorithmTests";
 			sourceTree = "<group>";
@@ -202,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CDEA17611F6D38E6004EEE99 /* ViewController.swift in Sources */,
+				CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */,
 				CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -210,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEA17801F6D3B87004EEE99 /* ZipCode.swift in Sources */,
+				CDEA17821F6D3E5F004EEE99 /* ZipCode+TestData.swift in Sources */,
 				CDEA17741F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
