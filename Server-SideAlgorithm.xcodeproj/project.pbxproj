@@ -22,8 +22,13 @@
 		CD5765061F6D7A16004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */; };
 		CD5765071F6D7A1A004EDD34 /* CityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */; };
 		CD5765081F6D7A1E004EDD34 /* AverageCityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */; };
+		CD5767511F6E9339004EDD34 /* ConsoleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767501F6E9339004EDD34 /* ConsoleViewController.swift */; };
+		CD5767531F6E945A004EDD34 /* UIColor+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767521F6E945A004EDD34 /* UIColor+Application.swift */; };
+		CD5767551F6E9727004EDD34 /* UIFont+Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767541F6E9727004EDD34 /* UIFont+Application.swift */; };
+		CD57675C1F6E9B6F004EDD34 /* PromptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57675B1F6E9B6F004EDD34 /* PromptTableViewCell.swift */; };
+		CD57675E1F6E9C4B004EDD34 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57675D1F6E9C4B004EDD34 /* ResponseTableViewCell.swift */; };
+		CD5767631F6E9D90004EDD34 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767621F6E9D90004EDD34 /* Prompt.swift */; };
 		CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */; };
-		CDEA17611F6D38E6004EEE99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17601F6D38E6004EEE99 /* ViewController.swift */; };
 		CDEA17641F6D38E6004EEE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17621F6D38E6004EEE99 /* Main.storyboard */; };
 		CDEA17661F6D38E6004EEE99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17651F6D38E6004EEE99 /* Assets.xcassets */; };
 		CDEA17691F6D38E6004EEE99 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17671F6D38E6004EEE99 /* LaunchScreen.storyboard */; };
@@ -57,9 +62,14 @@
 		CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageCityPopulationResponse.swift; sourceTree = "<group>"; };
 		CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPopulationResponse.swift; sourceTree = "<group>"; };
 		CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiggestSmallestCitiesResponse.swift; sourceTree = "<group>"; };
+		CD5767501F6E9339004EDD34 /* ConsoleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleViewController.swift; sourceTree = "<group>"; };
+		CD5767521F6E945A004EDD34 /* UIColor+Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Application.swift"; sourceTree = "<group>"; };
+		CD5767541F6E9727004EDD34 /* UIFont+Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIFont+Application.swift"; sourceTree = "<group>"; };
+		CD57675B1F6E9B6F004EDD34 /* PromptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptTableViewCell.swift; sourceTree = "<group>"; };
+		CD57675D1F6E9C4B004EDD34 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
+		CD5767621F6E9D90004EDD34 /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		CDEA175B1F6D38E6004EEE99 /* Server-SideAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Server-SideAlgorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDEA17601F6D38E6004EEE99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CDEA17631F6D38E6004EEE99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDEA17651F6D38E6004EEE99 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDEA17681F6D38E6004EEE99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,6 +110,7 @@
 				CD5764F01F6D6080004EDD34 /* City.swift */,
 				CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */,
 				CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */,
+				CD5767621F6E9D90004EDD34 /* Prompt.swift */,
 				CD5765091F6D7A2A004EDD34 /* Response Models */,
 			);
 			name = Model;
@@ -133,6 +144,41 @@
 			name = "Response Models";
 			sourceTree = "<group>";
 		};
+		CD5767561F6E9AAD004EDD34 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CD5767521F6E945A004EDD34 /* UIColor+Application.swift */,
+				CD5767541F6E9727004EDD34 /* UIFont+Application.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		CD57675F1F6E9D0B004EDD34 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CD57675B1F6E9B6F004EDD34 /* PromptTableViewCell.swift */,
+				CD57675D1F6E9C4B004EDD34 /* ResponseTableViewCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		CD5767601F6E9D1A004EDD34 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD5767611F6E9D26004EDD34 /* Console */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		CD5767611F6E9D26004EDD34 /* Console */ = {
+			isa = PBXGroup;
+			children = (
+				CD5767501F6E9339004EDD34 /* ConsoleViewController.swift */,
+				CD57675F1F6E9D0B004EDD34 /* Views */,
+			);
+			name = Console;
+			sourceTree = "<group>";
+		};
 		CDEA17521F6D38E6004EEE99 = {
 			isa = PBXGroup;
 			children = (
@@ -155,9 +201,10 @@
 			isa = PBXGroup;
 			children = (
 				CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */,
-				CDEA17601F6D38E6004EEE99 /* ViewController.swift */,
+				CD5767601F6E9D1A004EDD34 /* Controllers */,
 				CD5764FA1F6D744E004EDD34 /* Model */,
 				CD5764FC1F6D747F004EDD34 /* Networking */,
+				CD5767561F6E9AAD004EDD34 /* Extensions */,
 				CD5764FB1F6D7466004EDD34 /* Misc */,
 				CDEA17621F6D38E6004EEE99 /* Main.storyboard */,
 				CDEA17651F6D38E6004EEE99 /* Assets.xcassets */,
@@ -285,12 +332,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD5764F81F6D70B6004EDD34 /* JSONDictionary.swift in Sources */,
-				CDEA17611F6D38E6004EEE99 /* ViewController.swift in Sources */,
 				CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */,
+				CD57675E1F6E9C4B004EDD34 /* ResponseTableViewCell.swift in Sources */,
+				CD5767551F6E9727004EDD34 /* UIFont+Application.swift in Sources */,
 				CD5764FE1F6D7634004EDD34 /* StatePopulationResponse.swift in Sources */,
+				CD5767511F6E9339004EDD34 /* ConsoleViewController.swift in Sources */,
+				CD5767531F6E945A004EDD34 /* UIColor+Application.swift in Sources */,
+				CD5767631F6E9D90004EDD34 /* Prompt.swift in Sources */,
 				CD5765011F6D76F0004EDD34 /* AverageCityPopulationResponse.swift in Sources */,
 				CD5765051F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */,
 				CDEA178A1F6D50FC004EEE99 /* Reader.swift in Sources */,
+				CD57675C1F6E9B6F004EDD34 /* PromptTableViewCell.swift in Sources */,
 				CD5764F51F6D677F004EDD34 /* ZipCodeClient.swift in Sources */,
 				CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */,
 				CDEA178F1F6D576F004EEE99 /* ZipCodeCalculator.swift in Sources */,
