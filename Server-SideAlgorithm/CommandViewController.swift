@@ -95,7 +95,6 @@ class CommandViewController: UIViewController
     // MARK: - Helpers
     fileprivate func resetState()
     {
-        selectedState = "--"
         selectedCommand = .none
         updateStateTableAlpha()
     }
