@@ -35,7 +35,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="~ $" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yX9-ML-pbO">
-                                                    <rect key="frame" x="8" y="0.0" width="367" height="44"/>
+                                                    <rect key="frame" x="8" y="0.0" width="752" height="44"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -60,7 +60,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="{}" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cII-Gu-EB9">
-                                                    <rect key="frame" x="16" y="8" width="351" height="85"/>
+                                                    <rect key="frame" x="16" y="8" width="736" height="85"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -112,7 +112,18 @@
                                     <constraint firstAttribute="bottom" secondItem="qod-rA-Rwa" secondAttribute="bottom" id="jsS-Gi-Ueh"/>
                                     <constraint firstAttribute="trailing" secondItem="qod-rA-Rwa" secondAttribute="trailing" id="rW9-BU-EnI"/>
                                     <constraint firstItem="qod-rA-Rwa" firstAttribute="top" secondItem="qfg-jB-mgk" secondAttribute="top" id="vVP-Q4-S7H"/>
+                                    <constraint firstAttribute="width" constant="375" id="vef-LG-Mo3"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="vef-LG-Mo3"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular">
+                                    <mask key="constraints">
+                                        <include reference="vef-LG-Mo3"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="rov-Nc-05t" appends="YES" id="ASF-KP-Ujq"/>
                                 </connections>
@@ -126,9 +137,28 @@
                             <constraint firstItem="67o-o4-0Ry" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="D26-GW-yJN"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="67o-o4-0Ry" secondAttribute="bottom" id="I6k-bc-EPV"/>
                             <constraint firstAttribute="bottom" secondItem="qfg-jB-mgk" secondAttribute="top" constant="44" id="JM4-Tj-T38"/>
+                            <constraint firstAttribute="trailing" secondItem="qfg-jB-mgk" secondAttribute="trailing" constant="15" id="Oiq-AI-Od2"/>
                             <constraint firstItem="qfg-jB-mgk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="e0m-tj-r0m"/>
                             <constraint firstAttribute="trailing" secondItem="qfg-jB-mgk" secondAttribute="trailing" id="ucG-5m-YqW"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Oiq-AI-Od2"/>
+                                <exclude reference="e0m-tj-r0m"/>
+                                <exclude reference="ucG-5m-YqW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="e0m-tj-r0m"/>
+                                <include reference="ucG-5m-YqW"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="Oiq-AI-Od2"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="qfg-jB-mgk" id="krz-9l-4Mf"/>
