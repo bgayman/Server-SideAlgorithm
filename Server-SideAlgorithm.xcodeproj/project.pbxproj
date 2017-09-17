@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD5764F11F6D6080004EDD34 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F01F6D6080004EDD34 /* City.swift */; };
+		CD5764F21F6D63E2004EDD34 /* ZipCodeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */; };
+		CD5764F31F6D63F8004EDD34 /* City.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F01F6D6080004EDD34 /* City.swift */; };
+		CD5764F51F6D677F004EDD34 /* ZipCodeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F41F6D677F004EDD34 /* ZipCodeClient.swift */; };
+		CD5764F61F6D6850004EDD34 /* ZipCodeClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F41F6D677F004EDD34 /* ZipCodeClient.swift */; };
+		CD5764F81F6D70B6004EDD34 /* JSONDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F71F6D70B6004EDD34 /* JSONDictionary.swift */; };
+		CD5764F91F6D741F004EDD34 /* JSONDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764F71F6D70B6004EDD34 /* JSONDictionary.swift */; };
+		CD5764FE1F6D7634004EDD34 /* StatePopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764FD1F6D7634004EDD34 /* StatePopulationResponse.swift */; };
+		CD5764FF1F6D7636004EDD34 /* StatePopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5764FD1F6D7634004EDD34 /* StatePopulationResponse.swift */; };
+		CD5765011F6D76F0004EDD34 /* AverageCityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */; };
+		CD5765031F6D77CB004EDD34 /* CityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */; };
+		CD5765051F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */; };
+		CD5765061F6D7A16004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */; };
+		CD5765071F6D7A1A004EDD34 /* CityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */; };
+		CD5765081F6D7A1E004EDD34 /* AverageCityPopulationResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */; };
 		CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */; };
 		CDEA17611F6D38E6004EEE99 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17601F6D38E6004EEE99 /* ViewController.swift */; };
 		CDEA17641F6D38E6004EEE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17621F6D38E6004EEE99 /* Main.storyboard */; };
@@ -15,7 +30,13 @@
 		CDEA17741F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */; };
 		CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */; };
 		CDEA17801F6D3B87004EEE99 /* ZipCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */; };
-		CDEA17821F6D3E5F004EEE99 /* ZipCode+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */; };
+		CDEA17821F6D3E5F004EEE99 /* State+TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17811F6D3E5F004EEE99 /* State+TestData.swift */; };
+		CDEA17881F6D4956004EEE99 /* testData.json in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17861F6D44A0004EEE99 /* testData.json */; };
+		CDEA178A1F6D50FC004EEE99 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17891F6D50FC004EEE99 /* Reader.swift */; };
+		CDEA178B1F6D54F8004EEE99 /* Reader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17891F6D50FC004EEE99 /* Reader.swift */; };
+		CDEA178F1F6D576F004EEE99 /* ZipCodeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */; };
+		CDEA17911F6D5A40004EEE99 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17901F6D5A40004EEE99 /* State.swift */; };
+		CDEA17921F6D5CB2004EEE99 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA17901F6D5A40004EEE99 /* State.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +50,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CD5764F01F6D6080004EDD34 /* City.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = City.swift; sourceTree = "<group>"; };
+		CD5764F41F6D677F004EDD34 /* ZipCodeClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeClient.swift; sourceTree = "<group>"; };
+		CD5764F71F6D70B6004EDD34 /* JSONDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONDictionary.swift; sourceTree = "<group>"; };
+		CD5764FD1F6D7634004EDD34 /* StatePopulationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatePopulationResponse.swift; sourceTree = "<group>"; };
+		CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AverageCityPopulationResponse.swift; sourceTree = "<group>"; };
+		CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CityPopulationResponse.swift; sourceTree = "<group>"; };
+		CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BiggestSmallestCitiesResponse.swift; sourceTree = "<group>"; };
 		CDEA175B1F6D38E6004EEE99 /* Server-SideAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Server-SideAlgorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEA17601F6D38E6004EEE99 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +68,11 @@
 		CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server_SideAlgorithmTests.swift; sourceTree = "<group>"; };
 		CDEA17751F6D38E6004EEE99 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCode.swift; sourceTree = "<group>"; };
-		CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ZipCode+TestData.swift"; sourceTree = "<group>"; };
+		CDEA17811F6D3E5F004EEE99 /* State+TestData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "State+TestData.swift"; sourceTree = "<group>"; };
+		CDEA17861F6D44A0004EEE99 /* testData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = testData.json; path = "../Server-SideAlgorithm/testData.json"; sourceTree = "<group>"; };
+		CDEA17891F6D50FC004EEE99 /* Reader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reader.swift; sourceTree = "<group>"; };
+		CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZipCodeCalculator.swift; sourceTree = "<group>"; };
+		CDEA17901F6D5A40004EEE99 /* State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +93,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD5764FA1F6D744E004EDD34 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CDEA17901F6D5A40004EEE99 /* State.swift */,
+				CD5764F01F6D6080004EDD34 /* City.swift */,
+				CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */,
+				CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */,
+				CD5765091F6D7A2A004EDD34 /* Response Models */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CD5764FB1F6D7466004EDD34 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				CDEA17891F6D50FC004EEE99 /* Reader.swift */,
+				CD5764F71F6D70B6004EDD34 /* JSONDictionary.swift */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
+		CD5764FC1F6D747F004EDD34 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				CD5764F41F6D677F004EDD34 /* ZipCodeClient.swift */,
+			);
+			name = Networking;
+			sourceTree = "<group>";
+		};
+		CD5765091F6D7A2A004EDD34 /* Response Models */ = {
+			isa = PBXGroup;
+			children = (
+				CD5764FD1F6D7634004EDD34 /* StatePopulationResponse.swift */,
+				CD5765001F6D76F0004EDD34 /* AverageCityPopulationResponse.swift */,
+				CD5765021F6D77CB004EDD34 /* CityPopulationResponse.swift */,
+				CD5765041F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift */,
+			);
+			name = "Response Models";
+			sourceTree = "<group>";
+		};
 		CDEA17521F6D38E6004EEE99 = {
 			isa = PBXGroup;
 			children = (
@@ -84,7 +156,9 @@
 			children = (
 				CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */,
 				CDEA17601F6D38E6004EEE99 /* ViewController.swift */,
-				CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */,
+				CD5764FA1F6D744E004EDD34 /* Model */,
+				CD5764FC1F6D747F004EDD34 /* Networking */,
+				CD5764FB1F6D7466004EDD34 /* Misc */,
 				CDEA17621F6D38E6004EEE99 /* Main.storyboard */,
 				CDEA17651F6D38E6004EEE99 /* Assets.xcassets */,
 				CDEA17671F6D38E6004EEE99 /* LaunchScreen.storyboard */,
@@ -97,8 +171,9 @@
 			isa = PBXGroup;
 			children = (
 				CDEA17731F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift */,
+				CDEA17811F6D3E5F004EEE99 /* State+TestData.swift */,
+				CDEA17861F6D44A0004EEE99 /* testData.json */,
 				CDEA17751F6D38E6004EEE99 /* Info.plist */,
-				CDEA17811F6D3E5F004EEE99 /* ZipCode+TestData.swift */,
 			);
 			path = "Server-SideAlgorithmTests";
 			sourceTree = "<group>";
@@ -198,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDEA17881F6D4956004EEE99 /* testData.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,9 +284,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5764F81F6D70B6004EDD34 /* JSONDictionary.swift in Sources */,
 				CDEA17611F6D38E6004EEE99 /* ViewController.swift in Sources */,
 				CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */,
+				CD5764FE1F6D7634004EDD34 /* StatePopulationResponse.swift in Sources */,
+				CD5765011F6D76F0004EDD34 /* AverageCityPopulationResponse.swift in Sources */,
+				CD5765051F6D7855004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */,
+				CDEA178A1F6D50FC004EEE99 /* Reader.swift in Sources */,
+				CD5764F51F6D677F004EDD34 /* ZipCodeClient.swift in Sources */,
 				CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */,
+				CDEA178F1F6D576F004EEE99 /* ZipCodeCalculator.swift in Sources */,
+				CDEA17911F6D5A40004EEE99 /* State.swift in Sources */,
+				CD5765031F6D77CB004EDD34 /* CityPopulationResponse.swift in Sources */,
+				CD5764F11F6D6080004EDD34 /* City.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +304,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5764F91F6D741F004EDD34 /* JSONDictionary.swift in Sources */,
 				CDEA17801F6D3B87004EEE99 /* ZipCode.swift in Sources */,
-				CDEA17821F6D3E5F004EEE99 /* ZipCode+TestData.swift in Sources */,
+				CDEA17821F6D3E5F004EEE99 /* State+TestData.swift in Sources */,
+				CD5765081F6D7A1E004EDD34 /* AverageCityPopulationResponse.swift in Sources */,
+				CD5764FF1F6D7636004EDD34 /* StatePopulationResponse.swift in Sources */,
+				CD5764F21F6D63E2004EDD34 /* ZipCodeCalculator.swift in Sources */,
+				CD5764F61F6D6850004EDD34 /* ZipCodeClient.swift in Sources */,
+				CDEA178B1F6D54F8004EEE99 /* Reader.swift in Sources */,
+				CDEA17921F6D5CB2004EEE99 /* State.swift in Sources */,
 				CDEA17741F6D38E6004EEE99 /* Server_SideAlgorithmTests.swift in Sources */,
+				CD5764F31F6D63F8004EDD34 /* City.swift in Sources */,
+				CD5765071F6D7A1A004EDD34 /* CityPopulationResponse.swift in Sources */,
+				CD5765061F6D7A16004EDD34 /* BiggestSmallestCitiesResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,6 +520,7 @@
 				CDEA177A1F6D38E6004EEE99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDEA177B1F6D38E6004EEE99 /* Build configuration list for PBXNativeTarget "Server-SideAlgorithmTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +529,7 @@
 				CDEA177D1F6D38E6004EEE99 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
