@@ -24,8 +24,8 @@ struct BiggestSmallestCitiesResponse
     var dictionary: JSONDictionary
     {
         return [Keys.state.rawValue: state,
-                Keys.biggestCity.rawValue: biggestCity,
-                Keys.smallestCity.rawValue: smallestCity]
+                Keys.biggestCity.rawValue: biggestCity.dictionary,
+                Keys.smallestCity.rawValue: smallestCity.dictionary]
     }
 }
 

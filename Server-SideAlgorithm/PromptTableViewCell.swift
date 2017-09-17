@@ -72,8 +72,7 @@ class PromptTableViewCell: UITableViewCell
     {
         let dateString = PromptTableViewCell.dateFormatter.string(from: prompt.timestamp)
         let cursor =  shouldShowHorizontalCursor ? "▬" : "▮"
-        let components: [String?] = ["[" + dateString + "]", "~$", prompt.command, "▮"]
-        let promptComponents: [String] = components.flatMap { $0 }
+        let promptComponents = ["[" + dateString + "]", "~$", prompt.command ?? "▮"]
         let promptString = promptComponents.joined(separator: " ") as NSString
         let promptAttribString = NSMutableAttributedString(string: promptString as String,
                                                            attributes: [NSFontAttributeName: UIFont.app_font(ofSize: 15.0),

@@ -16,7 +16,7 @@ class ResponseTableViewCell: UITableViewCell
     {
         didSet
         {
-            
+            responseLabel.text = response
         }
     }
     

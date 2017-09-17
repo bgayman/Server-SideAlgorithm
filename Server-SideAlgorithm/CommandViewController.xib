@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommandViewController" customModule="Server_SideAlgorithm" customModuleProvider="target">
+            <connections>
+                <outlet property="commandLabel" destination="Mc2-Gx-0xY" id="Wka-mj-Wwu"/>
+                <outlet property="commandTableView" destination="1Pt-al-HfN" id="gHa-wx-dJh"/>
+                <outlet property="statesLabel" destination="F0F-Ht-kqg" id="W3w-nX-Ec6"/>
+                <outlet property="statesTableView" destination="tkW-dZ-V95" id="z3I-32-7uN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-le-T5E">
+                    <rect key="frame" x="8" y="44" width="367" height="623"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-Gx-0xY">
+                            <rect key="frame" x="0.0" y="0.0" width="367" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-al-HfN">
+                            <rect key="frame" x="0.0" y="6" width="367" height="160"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="160" id="oF6-RT-J1G"/>
+                            </constraints>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="hDN-cp-1OE"/>
+                                <outlet property="delegate" destination="-1" id="jDY-Yn-XqZ"/>
+                            </connections>
+                        </tableView>
+                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="States:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-Ht-kqg">
+                            <rect key="frame" x="0.0" y="172" width="367" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-dZ-V95">
+                            <rect key="frame" x="0.0" y="178" width="367" height="445"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="E4D-j0-zmu"/>
+                                <outlet property="delegate" destination="-1" id="zvq-LW-jTa"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="fNn-le-T5E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="9uw-Rw-Sah"/>
+                <constraint firstAttribute="trailing" secondItem="fNn-le-T5E" secondAttribute="trailing" id="Enp-j0-RQO"/>
+                <constraint firstItem="fNn-le-T5E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="LFj-Oa-Ccs"/>
+                <constraint firstAttribute="bottom" secondItem="fNn-le-T5E" secondAttribute="bottom" id="T5y-Th-wVr"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

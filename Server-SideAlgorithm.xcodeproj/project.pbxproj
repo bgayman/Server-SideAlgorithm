@@ -28,6 +28,9 @@
 		CD57675C1F6E9B6F004EDD34 /* PromptTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57675B1F6E9B6F004EDD34 /* PromptTableViewCell.swift */; };
 		CD57675E1F6E9C4B004EDD34 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD57675D1F6E9C4B004EDD34 /* ResponseTableViewCell.swift */; };
 		CD5767631F6E9D90004EDD34 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767621F6E9D90004EDD34 /* Prompt.swift */; };
+		CD5767661F6EAE4F004EDD34 /* CommandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5767641F6EAE4F004EDD34 /* CommandViewController.swift */; };
+		CD5767671F6EAE4F004EDD34 /* CommandViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CD5767651F6EAE4F004EDD34 /* CommandViewController.xib */; };
+		CDBF21401F6EC243009BA1A2 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF213F1F6EC242009BA1A2 /* Command.swift */; };
 		CDEA175F1F6D38E6004EEE99 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */; };
 		CDEA17641F6D38E6004EEE99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17621F6D38E6004EEE99 /* Main.storyboard */; };
 		CDEA17661F6D38E6004EEE99 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDEA17651F6D38E6004EEE99 /* Assets.xcassets */; };
@@ -68,6 +71,9 @@
 		CD57675B1F6E9B6F004EDD34 /* PromptTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromptTableViewCell.swift; sourceTree = "<group>"; };
 		CD57675D1F6E9C4B004EDD34 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
 		CD5767621F6E9D90004EDD34 /* Prompt.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		CD5767641F6EAE4F004EDD34 /* CommandViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommandViewController.swift; sourceTree = "<group>"; };
+		CD5767651F6EAE4F004EDD34 /* CommandViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CommandViewController.xib; sourceTree = "<group>"; };
+		CDBF213F1F6EC242009BA1A2 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
 		CDEA175B1F6D38E6004EEE99 /* Server-SideAlgorithm.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Server-SideAlgorithm.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDEA175E1F6D38E6004EEE99 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDEA17631F6D38E6004EEE99 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -111,6 +117,7 @@
 				CDEA177E1F6D3AA4004EEE99 /* ZipCode.swift */,
 				CDEA178E1F6D576F004EEE99 /* ZipCodeCalculator.swift */,
 				CD5767621F6E9D90004EDD34 /* Prompt.swift */,
+				CDBF213F1F6EC242009BA1A2 /* Command.swift */,
 				CD5765091F6D7A2A004EDD34 /* Response Models */,
 			);
 			name = Model;
@@ -166,6 +173,7 @@
 			isa = PBXGroup;
 			children = (
 				CD5767611F6E9D26004EDD34 /* Console */,
+				CD5767681F6EAE69004EDD34 /* Command */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +185,15 @@
 				CD57675F1F6E9D0B004EDD34 /* Views */,
 			);
 			name = Console;
+			sourceTree = "<group>";
+		};
+		CD5767681F6EAE69004EDD34 /* Command */ = {
+			isa = PBXGroup;
+			children = (
+				CD5767641F6EAE4F004EDD34 /* CommandViewController.swift */,
+				CD5767651F6EAE4F004EDD34 /* CommandViewController.xib */,
+			);
+			name = Command;
 			sourceTree = "<group>";
 		};
 		CDEA17521F6D38E6004EEE99 = {
@@ -310,6 +327,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5767671F6EAE4F004EDD34 /* CommandViewController.xib in Resources */,
 				CDEA17691F6D38E6004EEE99 /* LaunchScreen.storyboard in Resources */,
 				CDEA17661F6D38E6004EEE99 /* Assets.xcassets in Resources */,
 				CDEA17641F6D38E6004EEE99 /* Main.storyboard in Resources */,
@@ -333,6 +351,8 @@
 			files = (
 				CD5764F81F6D70B6004EDD34 /* JSONDictionary.swift in Sources */,
 				CDEA177F1F6D3AA4004EEE99 /* ZipCode.swift in Sources */,
+				CD5767661F6EAE4F004EDD34 /* CommandViewController.swift in Sources */,
+				CDBF21401F6EC243009BA1A2 /* Command.swift in Sources */,
 				CD57675E1F6E9C4B004EDD34 /* ResponseTableViewCell.swift in Sources */,
 				CD5767551F6E9727004EDD34 /* UIFont+Application.swift in Sources */,
 				CD5764FE1F6D7634004EDD34 /* StatePopulationResponse.swift in Sources */,
