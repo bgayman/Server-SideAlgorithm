@@ -72,7 +72,7 @@ class PromptTableViewCell: UITableViewCell
     {
         let dateString = PromptTableViewCell.dateFormatter.string(from: prompt.timestamp)
         let cursor =  shouldShowHorizontalCursor ? "▬" : "▮"
-        let promptComponents = ["[" + dateString + "]", "~$", prompt.command ?? "▮"]
+        let promptComponents = ["[" + dateString + "]", "~$", prompt.command ?? cursor]
         let promptString = promptComponents.joined(separator: " ") as NSString
         let promptAttribString = NSMutableAttributedString(string: promptString as String,
                                                            attributes: [NSFontAttributeName: UIFont.app_font(ofSize: 15.0),
@@ -85,6 +85,9 @@ class PromptTableViewCell: UITableViewCell
         let cursorRange = promptString.range(of: cursor)
         promptAttribString.addAttribute(NSForegroundColorAttributeName,
                                         value: UIColor.app_pink,
+                                        range: cursorRange)
+        promptAttribString.addAttribute(NSFontAttributeName,
+                                        value: UIFont.app_boldFont(ofSize: 20.0),
                                         range: cursorRange)
         return promptAttribString
     }

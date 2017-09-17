@@ -17,12 +17,32 @@ protocol CommandViewControllerDelegate: class
 // MARK: - CommandViewController
 class CommandViewController: UIViewController
 {
-    // MARK: - Outlets
-    @IBOutlet fileprivate weak var commandTableView: UITableView!
-    @IBOutlet fileprivate weak var statesTableView: UITableView!
-    @IBOutlet fileprivate weak var statesLabel: UILabel!
-    @IBOutlet fileprivate weak var commandLabel: UILabel!
+    // MARK: - Types
+    enum Sections: Int
+    {
+        case commands
+        case states
+        
+        var displayString: String
+        {
+            switch self
+            {
+            case .commands:
+                return "Commands:"
+            case .states:
+                return "States:"
+            }
+        }
+        
+        static var all: [Sections]
+        {
+            return [.commands, .states]
+        }
+    }
     
+    // MARK: - Outlets
+    @IBOutlet weak var tableView: UITableView!
+
     // MARK: - Properties
     weak var delegate: CommandViewControllerDelegate?
     var stateAbbreviations: [String]
@@ -30,7 +50,7 @@ class CommandViewController: UIViewController
         set
         {
             _stateAbbreviations = ["--"] + newValue
-            statesTableView.reloadData()
+            tableView.reloadData()
         }
         
         get
@@ -41,22 +61,17 @@ class CommandViewController: UIViewController
     }
     
     fileprivate var _stateAbbreviations = [String]()
-    
     fileprivate var selectedCommand = CommandSelection.none
     {
         didSet
         {
-            commandTableView.reloadData()
+            
+            updateShowStatesSection(oldValue: oldValue)
         }
+        
     }
-    
     fileprivate var selectedState = "--"
-    {
-        didSet
-        {
-            statesTableView.reloadData()
-        }
-    }
+    fileprivate var showStatesSection: Bool = false
     
     // MARK: - Lifecycle
     override func viewDidLoad()
@@ -74,21 +89,12 @@ class CommandViewController: UIViewController
                                                                    NSFontAttributeName: UIFont.app_font(ofSize: 20)]
         navigationController?.navigationBar.barTintColor = .black
         
-        commandLabel.font = UIFont.app_boldFont(ofSize: 15)
-        commandLabel.textColor = .white
-        statesLabel.font = UIFont.app_boldFont(ofSize: 15)
-        statesLabel.textColor = .white
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
         
-        commandTableView.rowHeight = 40.0
-        statesTableView.rowHeight = 40.0
-        
-        commandTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        statesTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        
-        commandTableView.tableFooterView = UIView()
-        statesTableView.tableFooterView = UIView()
-        
-        statesTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40.0, right: 0.0)
+        tableView.tableFooterView = UIView()
+        tableView.rowHeight = 40.0
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 40.0, right: 0.0)
+        tableView.sectionHeaderHeight = UITableViewAutomaticDimension
         
     }
     
@@ -96,22 +102,40 @@ class CommandViewController: UIViewController
     fileprivate func resetState()
     {
         selectedCommand = .none
-        updateStateTableAlpha()
+        selectedState = "--"
+        showStatesSection = false
     }
     
-    fileprivate func updateStateTableAlpha()
+    fileprivate func updateShowStatesSection(oldValue: CommandSelection)
     {
-        let showTable = !(selectedCommand == .none || selectedCommand == .overTenMillion)
-        UIView.animate(withDuration: 0.2)
-        { [unowned self] in
-            self.statesLabel.alpha = showTable ? 1.0 : 0.0
-            self.statesTableView.alpha = showTable ? 1.0 : 0.0
-        }
+        guard let oldIndex = CommandSelection.all.index(of: oldValue),
+              let newIndex = CommandSelection.all.index(of: selectedCommand)
+        else { return }
         
-        // If we're hiding the table makes more sense to reset state back to "--"
-        if !showTable
+        let oldShowStates = showStatesSection
+        showStatesSection = (selectedCommand == .averageCity || selectedCommand == .bigSmallCity)
+        let reloadIndexPaths = [oldIndex, newIndex].map { IndexPath(row: $0, section: Sections.commands.rawValue) }
+        
+        switch (oldShowStates, showStatesSection)
         {
-            self.selectedState = "--"
+        case (false, false), (true, true):
+            self.tableView.reloadData()
+        case (false, true):
+            UIView.animate(withDuration: 0.2)
+            { [unowned self] in
+                self.tableView.beginUpdates()
+                self.tableView.insertSections([Sections.states.rawValue], with: .automatic)
+                self.tableView.reloadRows(at: reloadIndexPaths, with: .automatic)
+                self.tableView.endUpdates()
+            }
+        case (true, false):
+            UIView.animate(withDuration: 0.2)
+            { [unowned self] in
+                self.tableView.beginUpdates()
+                self.tableView.deleteSections([Sections.states.rawValue], with: .automatic)
+                self.tableView.reloadRows(at: reloadIndexPaths, with: .automatic)
+                self.tableView.endUpdates()
+            }
         }
     }
     
@@ -128,14 +152,19 @@ class CommandViewController: UIViewController
 // MARK: - UITableViewDataSource / UITableViewDelegate
 extension CommandViewController: UITableViewDataSource, UITableViewDelegate
 {
+    func numberOfSections(in tableView: UITableView) -> Int
+    {
+        return showStatesSection ? Sections.all.count : Sections.all.count - 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        if tableView === self.commandTableView
+        guard let section = Sections(rawValue: section) else { return 0 }
+        switch section
         {
+        case .commands:
             return CommandViewController.CommandSelection.all.count
-        }
-        else
-        {
+        case .states:
             return _stateAbbreviations.count
         }
     }
@@ -149,14 +178,14 @@ extension CommandViewController: UITableViewDataSource, UITableViewDelegate
         cell.contentView.backgroundColor = .clear
         cell.tintColor = UIColor.app_yellow
         cell.selectionStyle = .none
-        if tableView === self.commandTableView
+        guard let section = Sections(rawValue: indexPath.section) else { return cell }
+        switch section
         {
+        case .commands:
             let command = CommandViewController.CommandSelection.all[indexPath.row]
             cell.textLabel?.text = command.displayString
             cell.accessoryType = command == selectedCommand ? .checkmark : .none
-        }
-        else
-        {
+        case .states:
             let abbreviation = _stateAbbreviations[indexPath.row]
             cell.textLabel?.text = abbreviation
             cell.accessoryType = abbreviation == selectedState ? .checkmark : .none
@@ -166,16 +195,30 @@ extension CommandViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if tableView === commandTableView
+        guard let section = Sections(rawValue: indexPath.section) else { return }
+        switch  section
         {
+        case .commands:
             selectedCommand = CommandViewController.CommandSelection.all[indexPath.row]
-            updateStateTableAlpha()
             checkIfCommandComplete()
-        }
-        else
-        {
+        case .states:
             selectedState = stateAbbreviations[indexPath.row]
             checkIfCommandComplete()
         }
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String?
+    {
+        guard let section = Sections(rawValue: section) else { return nil }
+        return section.displayString
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int)
+    {
+        guard let headerView = view as? UITableViewHeaderFooterView else { return }
+        headerView.textLabel?.font = UIFont.app_boldFont(ofSize: 15.0)
+        headerView.textLabel?.textColor = .white
+        headerView.contentView.backgroundColor = UIColor(white: 0.0, alpha: 0.5)
+        headerView.backgroundView = nil
     }
 }

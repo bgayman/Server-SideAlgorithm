@@ -89,10 +89,12 @@ class ConsoleViewController: UIViewController
     {
         UIApplication.shared.isNetworkActivityIndicatorVisible = true
         animateCursor(shouldAnimate: true)
+        panGesture.isEnabled = false
         ZipCodeClient.fetchJSONData
         { (response) in
             UIApplication.shared.isNetworkActivityIndicatorVisible = false
             self.animateCursor(shouldAnimate: false)
+            self.panGesture.isEnabled = true
             switch response
             {
             case .error:

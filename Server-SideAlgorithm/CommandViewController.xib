@@ -11,10 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CommandViewController" customModule="Server_SideAlgorithm" customModuleProvider="target">
             <connections>
-                <outlet property="commandLabel" destination="Mc2-Gx-0xY" id="Wka-mj-Wwu"/>
-                <outlet property="commandTableView" destination="1Pt-al-HfN" id="gHa-wx-dJh"/>
-                <outlet property="statesLabel" destination="F0F-Ht-kqg" id="W3w-nX-Ec6"/>
-                <outlet property="statesTableView" destination="tkW-dZ-V95" id="z3I-32-7uN"/>
+                <outlet property="tableView" destination="1Pt-al-HfN" id="dk2-o6-WGY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,49 +20,21 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-le-T5E">
-                    <rect key="frame" x="8" y="44" width="367" height="623"/>
-                    <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Commands:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc2-Gx-0xY">
-                            <rect key="frame" x="0.0" y="0.0" width="367" height="0.0"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-al-HfN">
-                            <rect key="frame" x="0.0" y="6" width="367" height="160"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="160" id="oF6-RT-J1G"/>
-                            </constraints>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="hDN-cp-1OE"/>
-                                <outlet property="delegate" destination="-1" id="jDY-Yn-XqZ"/>
-                            </connections>
-                        </tableView>
-                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.0" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="States:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F0F-Ht-kqg">
-                            <rect key="frame" x="0.0" y="172" width="367" height="0.0"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tkW-dZ-V95">
-                            <rect key="frame" x="0.0" y="178" width="367" height="445"/>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="E4D-j0-zmu"/>
-                                <outlet property="delegate" destination="-1" id="zvq-LW-jTa"/>
-                            </connections>
-                        </tableView>
-                    </subviews>
-                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Pt-al-HfN">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="hDN-cp-1OE"/>
+                        <outlet property="delegate" destination="-1" id="jDY-Yn-XqZ"/>
+                    </connections>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="fNn-le-T5E" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="9uw-Rw-Sah"/>
-                <constraint firstAttribute="trailing" secondItem="fNn-le-T5E" secondAttribute="trailing" id="Enp-j0-RQO"/>
-                <constraint firstItem="fNn-le-T5E" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="44" id="LFj-Oa-Ccs"/>
-                <constraint firstAttribute="bottom" secondItem="fNn-le-T5E" secondAttribute="bottom" id="T5y-Th-wVr"/>
+                <constraint firstItem="1Pt-al-HfN" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="6Gd-7p-jsN"/>
+                <constraint firstAttribute="bottom" secondItem="1Pt-al-HfN" secondAttribute="bottom" id="hAh-1X-QWZ"/>
+                <constraint firstItem="1Pt-al-HfN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pMc-mn-jLT"/>
+                <constraint firstAttribute="trailing" secondItem="1Pt-al-HfN" secondAttribute="trailing" id="scB-0h-dac"/>
             </constraints>
         </view>
     </objects>
